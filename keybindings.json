@@ -1,19 +1,5 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Enable esc with jj and jk for neovim mode
-    {
-        "command": "vscode-neovim.compositeEscape1",
-        "key": "j",
-        "when": "neovim.mode == insert && editorTextFocus",
-        "args": "j"
-    },
-    {
-        "command": "vscode-neovim.compositeEscape2",
-        "key": "k",
-        "when": "neovim.mode == insert && editorTextFocus",
-        "args": "k"
-    },
-
     // Whichkey
     {
         "key": "space",

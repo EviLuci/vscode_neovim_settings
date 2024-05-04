@@ -49,9 +49,20 @@
     },
     "extensions.ignoreRecommendations": true,
     "zenMode.hideLineNumbers": false,
+    // Neovim
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "$home/.config/nvim/init.lua",
+    "vscode-edge-devtools.webhint": false,
+    "editor.cursorSurroundingLines": 5,
     "editor.lineNumbers": "relative",
+    "vscode-neovim.compositeKeys": {
+        "jk": {
+            "command": "vscode-neovim.escape"
+        },
+        "jj": {
+            "command": "vscode-neovim.escape"
+        }
+    },
     "whichkey.delay": 0,
     "whichkey.sortOrder": "alphabetically",
     "whichkey.bindings": [
@@ -730,6 +741,5 @@
             "type": "command",
             "command": "workbench.action.toggleZenMode"
         }
-    ],
-    "vscode-edge-devtools.webhint": false
+    ]
 }
