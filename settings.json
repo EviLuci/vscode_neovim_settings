@@ -17,7 +17,7 @@
     "search.showLineNumbers": true,
     "search.smartCase": true,
     "window.autoDetectColorScheme": true,
-    "workbench.preferredLightColorTheme": "Visual Studio Dark",
+    "workbench.preferredLightColorTheme": "Tokyo Night",
     "workbench.colorTheme": "Tokyo Night",
     "workbench.preferredDarkColorTheme": "Tokyo Night",
     "telemetry.telemetryLevel": "off",
