@@ -18,6 +18,16 @@
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
+  {
+    "key": "alt+j",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "alt+k",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
 
   // Quick Open
   {
@@ -67,12 +77,12 @@
     "when": "neovim.mode != insert && editorTextFocus"
   },
   {
-    "key": "Tab",
+    "key": "shift+Tab",
     "command": "workbench.action.previousEditor",
     "when": "neovim.mode != insert && editorTextFocus"
   },
   {
-    "key": "alt+Tab",
+    "key": "Tab",
     "command": "workbench.action.nextEditor",
     "when": "neovim.mode != insert && editorTextFocus"
   },
@@ -169,12 +179,12 @@
 
   // Search Result Navigation
   {
-    "key": "ctrl+shift+j",
+    "key": "ctrl+j",
     "command": "search.action.focusNextSearchResult",
     "when": "hasSearchResult && activeViewlet == 'workbench.view.search'"
   },
   {
-    "key": "ctrl+shift+k",
+    "key": "ctrl+k",
     "command": "search.action.focusPreviousSearchResult",
     "when": "hasSearchResult && activeViewlet == 'workbench.view.search'"
   },
