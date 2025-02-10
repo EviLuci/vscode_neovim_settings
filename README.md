@@ -1,10 +1,3 @@
-# Vscode_neovim_settings
-vscode neovim settings and keymaps
-
-# Extensions
-- [vscode-neovim](https://github.com/vscode-neovim/vscode-neovim)
-- [VSpaceCode/vscode-which-key](https://github.com/VSpaceCode/vscode-which-key)
-
 # VSCode Neovim Settings & Keymaps
 
 This repository contains my personal VSCode settings and keybindings for integrating Neovim with VSCode using the `vscode-neovim` extension, along with `which-key` for enhanced keybinding hints.
