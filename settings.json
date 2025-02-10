@@ -332,7 +332,7 @@
     },
     {
       "key": "c",
-      "name": "+Code",
+      "name": "Code...",
       "type": "bindings",
       "bindings": [
         {
