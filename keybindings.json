@@ -67,22 +67,12 @@
 
   // Tab Switching
   {
-    "key": "alt+p",
+    "key": "ctrl+Tab",
     "command": "workbench.action.previousEditor",
     "when": "neovim.mode != insert && editorTextFocus"
   },
   {
-    "key": "alt+n",
-    "command": "workbench.action.nextEditor",
-    "when": "neovim.mode != insert && editorTextFocus"
-  },
-  {
-    "key": "shift+Tab",
-    "command": "workbench.action.previousEditor",
-    "when": "neovim.mode != insert && editorTextFocus"
-  },
-  {
-    "key": "Tab",
+    "key": "ctrl+shift+Tab",
     "command": "workbench.action.nextEditor",
     "when": "neovim.mode != insert && editorTextFocus"
   },
@@ -150,41 +140,14 @@
     "when": "terminalFocus"
   },
 
-  // Terminal Key Passthrough
-  {
-    "key": "ctrl+e",
-    "command": "ctrl+e",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+t",
-    "command": "ctrl+t",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "ctrl+j",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "ctrl+k",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "ctrl+r",
-    "when": "terminalFocus"
-  },
-
   // Search Result Navigation
   {
-    "key": "ctrl+j",
+    "key": "ctrl+n",
     "command": "search.action.focusNextSearchResult",
     "when": "hasSearchResult && activeViewlet == 'workbench.view.search'"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+p",
     "command": "search.action.focusPreviousSearchResult",
     "when": "hasSearchResult && activeViewlet == 'workbench.view.search'"
   },

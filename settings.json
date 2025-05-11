@@ -54,7 +54,6 @@
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.cursorStyle": "block",
   "editor.copyWithSyntaxHighlighting": false,
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true,
@@ -1133,5 +1132,7 @@
         }
       ]
     }
-  ]
+  ],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }
