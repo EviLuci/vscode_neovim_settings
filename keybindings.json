@@ -4,7 +4,81 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "neovim.mode != insert && editorTextFocus"
+    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+  },
+
+  // Errors
+  {
+    "key": "]e",
+    "command": "editor.action.marker.next",
+    "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "[e",
+    "command": "editor.action.marker.prev",
+    "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "]E",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "[E",
+    "command": "editor.action.marker.prevInFiles",
+    "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
+  },
+
+  // Change
+  {
+    "key": "[c",
+    "name": "Previous change",
+    "type": "command",
+    "command": "workbench.action.editor.previousChange"
+  },
+  {
+    "key": "]c",
+    "name": "Next change",
+    "type": "command",
+    "command": "workbench.action.editor.nextChange"
+  },
+
+  // Clear `highlight` command
+  {
+    "key": "escape",
+    "name": "Clear Highlights",
+    "type": "command",
+    "command": "vscode-neovim.send",
+    "args": ":noh<CR>"
+  },
+
+  // Toggle File Explorer
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    "when": "neovim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
+  },
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "space e",
+    "when": "neovim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
 
   // Suggestion
@@ -37,6 +111,16 @@
   },
   {
     "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+k",
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "inQuickOpen"
   },
@@ -83,6 +167,16 @@
   },
   {
     "key": "shift+l",
+    "command": "workbench.action.nextEditor",
+    "when": "neovim.mode != insert && editorTextFocus"
+  },
+  {
+    "key": "[b",
+    "command": "workbench.action.previousEditor",
+    "when": "neovim.mode != insert && editorTextFocus"
+  },
+  {
+    "key": "]b",
     "command": "workbench.action.nextEditor",
     "when": "neovim.mode != insert && editorTextFocus"
   },
@@ -151,6 +245,16 @@
   },
 
   // Search Result Navigation
+  {
+    "key": "ctrl+n",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult && activeViewlet == 'workbench.view.search'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult && activeViewlet == 'workbench.view.search'"
+  },
   {
     "key": "ctrl+n",
     "command": "search.action.focusNextSearchResult",

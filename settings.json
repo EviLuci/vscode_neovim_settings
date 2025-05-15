@@ -5,7 +5,7 @@
   // AI
   // Github Copilot
   "github.copilot.chat.inlineChatHint.enabled": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": false,
 
   "supermaven.enable": {
     "*": true
@@ -140,22 +140,16 @@
   "whichkey.sortOrder": "alphabetically",
   "whichkey.bindings": [
     {
-      "key": "/",
-      "name": "Comment line",
+      "key": " ",
+      "name": "Find Recent Files",
       "type": "command",
-      "command": "editor.action.commentLine"
+      "command": "workbench.action.quickOpen"
     },
     {
-      "key": ";",
-      "name": "Commands",
+      "key": ",",
+      "name": "Show All Editors",
       "type": "command",
-      "command": "workbench.action.showCommands"
-    },
-    {
-      "key": "q",
-      "name": "Close active editor",
-      "type": "command",
-      "command": "workbench.action.closeActiveEditor"
+      "command": "workbench.action.showAllEditors"
     },
     {
       "key": "e",
@@ -164,10 +158,10 @@
       "command": "workbench.view.explorer"
     },
     {
-      "key": "o",
-      "name": "Quick Open File",
+      "key": "l",
+      "name": "Extensions",
       "type": "command",
-      "command": "workbench.action.quickOpen"
+      "command": "workbench.view.extensions"
     },
     {
       "key": "-",
@@ -188,73 +182,10 @@
       "command": "editor.action.toggleMinimap"
     },
     {
-      "key": "n",
-      "name": "highlight",
-      "type": "command",
-      "command": "vscode-neovim.send",
-      "args": ":noh<CR>"
-    },
-    {
-      "key": "?",
-      "name": "Search keybindings",
-      "type": "command",
-      "command": "whichkey.searchBindings"
-    },
-    {
       "key": ".",
       "name": "Repeat most recent action",
       "type": "command",
       "command": "whichkey.repeatMostRecent"
-    },
-    {
-      "key": "[",
-      "name": "Previous",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "e",
-          "name": "Previous error in file",
-          "type": "command",
-          "command": "editor.action.marker.prevInFiles"
-        },
-        {
-          "key": "E",
-          "name": "Previous error",
-          "type": "command",
-          "command": "editor.action.marker.prev"
-        },
-        {
-          "key": "c",
-          "name": "Previous change",
-          "type": "command",
-          "command": "workbench.action.editor.previousChange"
-        }
-      ]
-    },
-    {
-      "key": "]",
-      "name": "Next",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "e",
-          "name": "Next error in file",
-          "type": "command",
-          "command": "editor.action.marker.nextInFiles"
-        },
-        {
-          "key": "E",
-          "name": "Next error",
-          "type": "command",
-          "command": "editor.action.marker.next"
-        },
-        {
-          "key": "c",
-          "name": "Next change",
-          "type": "command",
-          "command": "workbench.action.editor.nextChange"
-        }
-      ]
     },
     {
       "key": "b",
@@ -298,7 +229,7 @@
           "command": "workbench.action.moveEditorToRightGroup"
         },
         {
-          "key": "x",
+          "key": "o",
           "name": "Close other editors",
           "type": "command",
           "command": "workbench.action.closeOtherEditors"
@@ -406,8 +337,8 @@
           "command": "workbench.action.debug.start"
         },
         {
-          "key": "q",
-          "name": "Stop debug",
+          "key": "t",
+          "name": "Terminate debug",
           "type": "command",
           "command": "workbench.action.debug.stop"
         },
@@ -418,7 +349,7 @@
           "command": "workbench.action.debug.continue"
         },
         {
-          "key": "p",
+          "key": "P",
           "name": "Pause debug",
           "type": "command",
           "command": "workbench.action.debug.pause"
@@ -442,7 +373,7 @@
           "command": "workbench.action.debug.stepInto"
         },
         {
-          "key": "s",
+          "key": "O",
           "name": "Step over",
           "type": "command",
           "command": "workbench.action.debug.stepOver"
@@ -460,26 +391,26 @@
           "command": "workbench.action.debug.stepOut"
         },
         {
-          "key": "t",
+          "key": "b",
           "name": "Toggle breakpoint",
           "type": "command",
           "command": "editor.debug.action.toggleBreakpoint"
         },
         {
-          "key": "T",
+          "key": "B",
           "name": "Toggle inline breakpoint",
           "type": "command",
           "command": "editor.debug.action.toggleInlineBreakpoint"
         },
         {
-          "key": "j",
+          "key": "C",
           "name": "Jump to cursor",
           "type": "command",
           "command": "debug.jumpToCursor"
         },
         {
-          "key": "v",
-          "name": "REPL",
+          "key": "T",
+          "name": "Toggle REPL",
           "type": "command",
           "command": "workbench.debug.action.toggleRepl"
         },
@@ -697,6 +628,66 @@
       ]
     },
     {
+      "key": "H",
+      "name": "Harpoon Add Editor",
+      "type": "command",
+      "command": "vscode-harpoon.addEditor"
+    },
+    {
+      "key": "1",
+      "name": "Go to Editor 1",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor1"
+    },
+    {
+      "key": "2",
+      "name": "Go to Editor 2",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor2"
+    },
+    {
+      "key": "3",
+      "name": "Go to Editor 3",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor3"
+    },
+    {
+      "key": "4",
+      "name": "Go to Editor 4",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor4"
+    },
+    {
+      "key": "5",
+      "name": "Go to Editor 5",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor5"
+    },
+    {
+      "key": "6",
+      "name": "Go to Editor 6",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor6"
+    },
+    {
+      "key": "7",
+      "name": "Go to Editor 7",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor7"
+    },
+    {
+      "key": "8",
+      "name": "Go to Editor 8",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor8"
+    },
+    {
+      "key": "9",
+      "name": "Go to Editor 9",
+      "type": "command",
+      "command": "vscode-harpoon.gotoEditor9"
+    },
+    {
       "key": "h",
       "name": "Harpoon",
       "type": "bindings",
@@ -708,7 +699,7 @@
           "command": "vscode-harpoon.addEditor"
         },
         {
-          "key": "o",
+          "key": "p",
           "name": "Quick Pick",
           "type": "command",
           "command": "vscode-harpoon.editorQuickPick"
@@ -718,85 +709,6 @@
           "name": "Edit Editors",
           "type": "command",
           "command": "vscode-harpoon.editEditors"
-        },
-        {
-          "key": "1",
-          "name": "Go to Editor 1",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor1"
-        },
-        {
-          "key": "2",
-          "name": "Go to Editor 2",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor2"
-        },
-        {
-          "key": "3",
-          "name": "Go to Editor 3",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor3"
-        },
-        {
-          "key": "4",
-          "name": "Go to Editor 4",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor4"
-        },
-        {
-          "key": "5",
-          "name": "Go to Editor 5",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor5"
-        },
-        {
-          "key": "6",
-          "name": "Go to Editor 6",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor6"
-        },
-        {
-          "key": "7",
-          "name": "Go to Editor 7",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor7"
-        },
-        {
-          "key": "8",
-          "name": "Go to Editor 8",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor8"
-        },
-        {
-          "key": "9",
-          "name": "Go to Editor 9",
-          "type": "command",
-          "command": "vscode-harpoon.gotoEditor9"
-        }
-      ]
-    },
-    {
-      "key": "i",
-      "name": "Insert...",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "j",
-          "name": "Insert line below",
-          "type": "command",
-          "command": "editor.action.insertLineAfter"
-        },
-        {
-          "key": "k",
-          "name": "Insert line above",
-          "type": "command",
-          "command": "editor.action.insertLineBefore"
-        },
-        {
-          "key": "s",
-          "name": "Insert snippet",
-          "type": "command",
-          "command": "editor.action.insertSnippet"
         }
       ]
     },
