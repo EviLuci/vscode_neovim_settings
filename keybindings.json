@@ -52,6 +52,12 @@
     "args": ":noh<CR>"
   },
 
+  {
+    "key": "ctrl+enter",
+    "command": "github.copilot.acceptCursorPanelSolution",
+    "when": "neovim.mode == 'insert' && github.copilot.panelVisible && activeWebviewPanelId == 'GitHub Copilot Suggestions'"
+  },
+
   // Toggle File Explorer
   {
     "key": "space e",

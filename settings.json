@@ -188,6 +188,31 @@
       "command": "whichkey.repeatMostRecent"
     },
     {
+      "key": "a",
+      "name": "AI...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "a",
+          "name": "Ask Copilot",
+          "type": "command",
+          "command": "workbench.panel.chat"
+        },
+        {
+          "key": "c",
+          "name": "Chat Copilot",
+          "type": "command",
+          "command": "workbench.panel.chat.focus"
+        },
+
+        {
+          "key": "f",
+          "name": "Fix Chat",
+          "command": "github.copilot.chat.fix"
+        }
+      ]
+    },
+    {
       "key": "b",
       "name": "Buffers/Editors...",
       "type": "bindings",
@@ -288,6 +313,11 @@
           "command": "editor.action.sourceAction"
         },
         {
+          "key": "p",
+          "command": "markdown.showPreviewToSide",
+          "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+        },
+        {
           "key": "i",
           "name": "Organize Imports",
           "type": "command",
@@ -306,7 +336,7 @@
           "command": "editor.action.Refactor"
         },
         {
-          "key": "f",
+          "key": "F",
           "name": "Format",
           "type": "command",
           "command": "editor.action.formatDocument"
@@ -493,19 +523,6 @@
           "name": "Commit",
           "type": "command",
           "command": "git.commit"
-        },
-        {
-          "key": "b",
-          "name": "Browse",
-          "type": "command",
-          "command": "gitlens.openFileInRemote"
-        },
-        {
-          "key": "/",
-          "name": "Search Commits",
-          "command": "gitlens.showCommitSearch",
-          "type": "command",
-          "when": "gitlens:enabled && config.gitlens.keymap == 'alternate'"
         },
         {
           "key": "d",
@@ -847,7 +864,7 @@
       ]
     },
     {
-      "key": "t",
+      "key": "T",
       "name": "UI toggles...",
       "type": "bindings",
       "bindings": [
@@ -856,18 +873,6 @@
           "name": "Toggle zen mode",
           "type": "command",
           "command": "workbench.action.toggleZenMode"
-        },
-        {
-          "key": "t",
-          "name": "Toggle Terminal",
-          "type": "command",
-          "command": "workbench.action.togglePanel"
-        },
-        {
-          "key": "b",
-          "name": "Toggle side bar visibility",
-          "type": "command",
-          "command": "workbench.action.toggleSidebarVisibility"
         },
         {
           "key": "p",
@@ -908,21 +913,31 @@
       ]
     },
     {
-      "key": "T",
+      "key": "t",
       "name": "Toggles...",
       "type": "bindings",
       "bindings": [
         {
-          "key": "b",
-          "name": "Toggle git blame",
+          "key": "t",
+          "name": "Toggle Terminal",
           "type": "command",
-          "command": "gitlens.toggleLineBlame"
+          "command": "workbench.action.togglePanel"
         },
         {
           "key": "c",
-          "name": "Toggle find case sensitive",
+          "command": "workbench.panel.chat.view.copilot.toggleVisibility"
+        },
+        {
+          "key": "a",
+          "name": "Toggle AI (Copilot",
           "type": "command",
-          "command": "toggleFindCaseSensitive"
+          "command": "github.copilot.completions.toggle"
+        },
+        {
+          "key": "B",
+          "name": "Toggle git blame",
+          "type": "command",
+          "command": "gitlens.toggleLineBlame"
         },
         {
           "key": "r",
@@ -935,6 +950,12 @@
           "name": "Toggle status bar",
           "type": "command",
           "command": "workbench.action.toggleStatusbarVisibility"
+        },
+        {
+          "key": "b",
+          "name": "Toggle side bar visibility",
+          "type": "command",
+          "command": "workbench.action.toggleSidebarVisibility"
         },
         {
           "key": "w",
