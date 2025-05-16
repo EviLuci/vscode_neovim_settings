@@ -199,6 +199,12 @@
           "command": "workbench.panel.chat"
         },
         {
+          "key": "q",
+          "name": "Quick Chat",
+          "type": "command",
+          "command": "workbench.action.openQuickChat"
+        },
+        {
           "key": "c",
           "name": "Chat Copilot",
           "type": "command",
