@@ -320,6 +320,7 @@
         },
         {
           "key": "p",
+          "name": "Preview Markdown to Side",
           "command": "markdown.showPreviewToSide",
           "when": "!notebookEditorFocused && editorLangId == 'markdown'"
         },
@@ -525,13 +526,18 @@
           "command": "git.checkout"
         },
         {
+          "key": "d",
+          "name": "Diff",
+          "command": "git.timeline.openDiff"
+        },
+        {
           "key": "c",
           "name": "Commit",
           "type": "command",
           "command": "git.commit"
         },
         {
-          "key": "d",
+          "key": "D",
           "name": "Delete Branch",
           "type": "command",
           "command": "git.deleteBranch"
@@ -576,6 +582,18 @@
               "name": "Revert selected ranges",
               "type": "command",
               "command": "git.revertSelectedRanges"
+            },
+            {
+              "key": "s",
+              "name": "Stage",
+              "type": "command",
+              "command": "git.stage"
+            },
+            {
+              "key": "u",
+              "name": "Unstage",
+              "type": "command",
+              "command": "git.unstage"
             }
           ]
         },
@@ -585,56 +603,24 @@
           "type": "command",
           "command": "git.viewFileHistory"
         },
+
         {
-          "key": "s",
-          "name": "Stage",
-          "type": "command",
-          "command": "git.stage"
-        },
-        {
-          "key": "u",
-          "name": "Unstage",
-          "type": "command",
-          "command": "git.unstage"
-        },
-        {
-          "key": "j",
+          "key": "n",
           "name": "Next Change",
           "type": "command",
           "command": "workbench.action.editor.nextChange"
         },
         {
-          "key": "k",
+          "key": "p",
           "name": "Previous Change",
           "type": "command",
           "command": "workbench.action.editor.previousChange"
-        },
-        {
-          "key": "l",
-          "name": "Toggle Line Blame",
-          "type": "command",
-          "command": "gitlens.toggleLineBlame",
-          "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'alternate'"
-        },
-        {
-          "key": "g",
-          "name": "Toggle GitLens",
-          "type": "command",
-          "command": "gitlens.toggleCodeLens",
-          "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'alternate'"
         },
         {
           "key": "S",
           "name": "Stash",
           "type": "command",
           "command": "workbench.view.scm"
-        },
-        {
-          "key": "r",
-          "name": "Repo Status",
-          "type": "command",
-          "command": "gitlens.showQuickRepoStatus",
-          "when": "gitlens:enabled && config.gitlens.keymap == 'alternate'"
         },
         {
           "key": "t",
