@@ -7,6 +7,33 @@
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
 
+  // Harpoon
+  {
+    "key": "1",
+    "command": "vscode-harpoon.gotoEditor1",
+    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "2",
+    "command": "vscode-harpoon.gotoEditor2",
+    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "3",
+    "command": "vscode-harpoon.gotoEditor3",
+    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "4",
+    "command": "vscode-harpoon.gotoEditor4",
+    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "5",
+    "command": "vscode-harpoon.gotoEditor5",
+    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+  },
+
   // Errors
   {
     "key": "]e",

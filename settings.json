@@ -643,60 +643,6 @@
       "command": "vscode-harpoon.addEditor"
     },
     {
-      "key": "1",
-      "name": "Go to Editor 1",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor1"
-    },
-    {
-      "key": "2",
-      "name": "Go to Editor 2",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor2"
-    },
-    {
-      "key": "3",
-      "name": "Go to Editor 3",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor3"
-    },
-    {
-      "key": "4",
-      "name": "Go to Editor 4",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor4"
-    },
-    {
-      "key": "5",
-      "name": "Go to Editor 5",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor5"
-    },
-    {
-      "key": "6",
-      "name": "Go to Editor 6",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor6"
-    },
-    {
-      "key": "7",
-      "name": "Go to Editor 7",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor7"
-    },
-    {
-      "key": "8",
-      "name": "Go to Editor 8",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor8"
-    },
-    {
-      "key": "9",
-      "name": "Go to Editor 9",
-      "type": "command",
-      "command": "vscode-harpoon.gotoEditor9"
-    },
-    {
       "key": "h",
       "name": "Harpoon",
       "type": "bindings",
