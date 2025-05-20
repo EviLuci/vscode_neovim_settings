@@ -79,6 +79,12 @@
     "args": ":noh<CR>"
   },
 
+  // GitHub Copilot
+  {
+    "key": "alt+l",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "neovim.mode == 'insert' && inlineSuggestionVisible && !accessibilityModeEnabled && !editorReadonly"
+  },
   {
     "key": "ctrl+enter",
     "command": "github.copilot.acceptCursorPanelSolution",

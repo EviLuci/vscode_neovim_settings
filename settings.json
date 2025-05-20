@@ -5,7 +5,7 @@
   // AI
   // Github Copilot
   "github.copilot.chat.inlineChatHint.enabled": true,
-  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
 
   "supermaven.enable": {
     "*": true
