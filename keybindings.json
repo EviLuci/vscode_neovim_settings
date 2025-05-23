@@ -34,6 +34,8 @@
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
 
+  // Move inside insert mode
+
   // Errors
   {
     "key": "]e",
@@ -56,15 +58,15 @@
     "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
   },
 
-  // Change
+  // Git Change
   {
-    "key": "[c",
+    "key": "[g",
     "name": "Previous change",
     "type": "command",
     "command": "workbench.action.editor.previousChange"
   },
   {
-    "key": "]c",
+    "key": "]g",
     "name": "Next change",
     "type": "command",
     "command": "workbench.action.editor.nextChange"
