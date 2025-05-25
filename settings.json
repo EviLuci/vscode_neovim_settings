@@ -146,6 +146,12 @@
       "command": "workbench.action.quickOpen"
     },
     {
+      "key": "?",
+      "name": "Search Keybindings",
+      "type": "command",
+      "command": "whichkey.searchBindings"
+    },
+    {
       "key": ",",
       "name": "Show All Editors",
       "type": "command",
@@ -170,7 +176,7 @@
       "command": "workbench.action.splitEditorDown"
     },
     {
-      "key": "/",
+      "key": "|",
       "name": "Split Vertical",
       "type": "command",
       "command": "workbench.action.splitEditor"
@@ -224,10 +230,16 @@
       "type": "bindings",
       "bindings": [
         {
-          "key": "b",
+          "key": "a",
           "name": "Show all buffers/editors",
           "type": "command",
           "command": "workbench.action.showAllEditors"
+        },
+        {
+          "key": "p",
+          "name": "Pin active editor",
+          "type": "command",
+          "command": "workbench.action.pinEditor"
         },
         {
           "key": "d",
@@ -266,16 +278,16 @@
           "command": "workbench.action.closeOtherEditors"
         },
         {
-          "key": "n",
-          "name": "Next editor",
+          "key": "l",
+          "name": "Close editors to the left",
           "type": "command",
-          "command": "workbench.action.nextEditor"
+          "command": "workbench.action.closeEditorsToTheLeft"
         },
         {
-          "key": "p",
-          "name": "Previous editor",
+          "key": "r",
+          "name": "Close editors to the right",
           "type": "command",
-          "command": "workbench.action.previousEditor"
+          "command": "workbench.action.closeEditorsToTheRight"
         },
         {
           "key": "N",
@@ -618,7 +630,7 @@
         },
         {
           "key": "S",
-          "name": "Stash",
+          "name": "Stash/Status",
           "type": "command",
           "command": "workbench.view.scm"
         },
@@ -668,6 +680,56 @@
       ]
     },
     {
+      "key": "m",
+      "name": "+Bookmark",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "t",
+          "name": "Toggle Bookmark",
+          "type": "command",
+          "command": "bookmarks.toggle"
+        },
+        {
+          "key": "l",
+          "name": "List Bookmark",
+          "type": "command",
+          "command": "bookmarks.list"
+        },
+        {
+          "key": "n",
+          "name": "Next Bookmark",
+          "type": "command",
+          "command": "bookmarks.jumpToNext"
+        },
+        {
+          "key": "p",
+          "name": "Previous Bookmark",
+          "type": "command",
+          "command": "bookmarks.jumpToPrevious"
+        }
+      ]
+    },
+    {
+      "key": "n",
+      "name": "Show Notifications",
+      "type": "command",
+      "command": "notifications.toggleList"
+    },
+    {
+      "key": "u",
+      "name": "Dismiss",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "n",
+          "name": "Notifications",
+          "type": "command",
+          "command": "notifications.clearAll"
+        }
+      ]
+    },
+    {
       "key": "r",
       "name": "Run...",
       "type": "bindings",
@@ -704,7 +766,7 @@
           "command": "workbench.action.showAllSymbols"
         },
         {
-          "key": "w",
+          "key": "p",
           "name": "Search word in a project",
           "type": "commands",
           "commands": [
@@ -747,6 +809,37 @@
               "name": "Project",
               "type": "command",
               "command": "workbench.action.replaceInFiles"
+            }
+          ]
+        },
+        {
+          "key": "n",
+          "name": "Notifications",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "a",
+              "name": "Show all notifications",
+              "type": "command",
+              "command": "notifications.showList"
+            },
+            {
+              "key": "d",
+              "name": "Dismiss all notifications",
+              "type": "command",
+              "command": "notifications.dismiss"
+            },
+            {
+              "key": "h",
+              "name": "Hide notification",
+              "type": "command",
+              "command": "notifications.hideList"
+            },
+            {
+              "key": "t",
+              "name": "Toggle notifications",
+              "type": "command",
+              "command": "notifications.toggleList"
             }
           ]
         }
@@ -863,6 +956,8 @@
         },
         {
           "key": "c",
+          "name": "Toggle Chat",
+          "type": "command",
           "command": "workbench.panel.chat.view.copilot.toggleVisibility"
         },
         {
@@ -870,6 +965,12 @@
           "name": "Toggle AI (Copilot",
           "type": "command",
           "command": "github.copilot.completions.toggle"
+        },
+        {
+          "key": "d",
+          "name": "Toggle Do Not Disturb Mode",
+          "type": "command",
+          "command": "notifications.toggleDoNotDisturbMode"
         },
         {
           "key": "B",
@@ -920,18 +1021,6 @@
       "name": "Window...",
       "type": "bindings",
       "bindings": [
-        {
-          "key": "-",
-          "name": "Split editor below",
-          "type": "command",
-          "command": "workbench.action.splitEditorDown"
-        },
-        {
-          "key": "/",
-          "name": "Split editor right",
-          "type": "command",
-          "command": "workbench.action.splitEditor"
-        },
         {
           "key": "p",
           "name": "Focus previous editor group",
@@ -1015,19 +1104,23 @@
           "key": "x",
           "name": "List errors",
           "type": "command",
-          "command": "workbench.actions.view.problems"
+          "command": "workbench.action.showErrorsWarnings"
         },
         {
           "key": "n",
-          "name": "Next error",
+          "name": "Next error in files",
           "type": "command",
-          "command": "editor.action.marker.next"
+          "command": "editor.action.marker.nextInFiles"
         },
         {
           "key": "p",
-          "name": "Previous error",
+          "name": "Previous error in files",
           "type": "command",
-          "command": "editor.action.marker.prev"
+          "command": "editor.action.marker.prevInFiles"
+        },
+        {
+          "key": "d",
+          "command": "workbench.action.view.problems"
         }
       ]
     },
