@@ -148,27 +148,27 @@
 
   // Harpoon
   {
-    "key": "1",
+    "key": "space 1",
     "command": "vscode-harpoon.gotoEditor1",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "2",
+    "key": "space 2",
     "command": "vscode-harpoon.gotoEditor2",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "3",
+    "key": "space 3",
     "command": "vscode-harpoon.gotoEditor3",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "4",
+    "key": "space 4",
     "command": "vscode-harpoon.gotoEditor4",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "5",
+    "key": "space 5",
     "command": "vscode-harpoon.gotoEditor5",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },

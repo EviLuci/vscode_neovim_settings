@@ -182,12 +182,6 @@
       "command": "workbench.action.splitEditor"
     },
     {
-      "key": "m",
-      "name": "minimap",
-      "type": "command",
-      "command": "editor.action.toggleMinimap"
-    },
-    {
       "key": ".",
       "name": "Repeat most recent action",
       "type": "command",
