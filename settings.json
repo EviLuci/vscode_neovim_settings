@@ -43,6 +43,7 @@
   "workbench.preferredLightColorTheme": "Tokyo Night",
   "workbench.colorTheme": "Tokyo Night",
   "workbench.preferredDarkColorTheme": "Tokyo Night",
+  "workbench.editor.revealIfOpen": true,
 
   // Telemetry
   "telemetry.telemetryLevel": "off",
@@ -137,7 +138,8 @@
 
   // Whichkey
   "whichkey.delay": 0,
-  "whichkey.sortOrder": "alphabetically",
+  "whichkey.sortOrder": "customNonNumberFirst",
+  "whichkey.useFullWidthCharacters": true,
   "whichkey.bindings": [
     {
       "key": " ",
@@ -647,6 +649,36 @@
       "name": "Harpoon Add Editor",
       "type": "command",
       "command": "vscode-harpoon.addEditor"
+    },
+    {
+      "key": "1",
+      "name": "Harpoon Goto Editor 1",
+      "command": "vscode-harpoon.gotoEditor1",
+      "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+    },
+    {
+      "key": "2",
+      "name": "Harpoon Goto Editor 2",
+      "command": "vscode-harpoon.gotoEditor2",
+      "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+    },
+    {
+      "key": "3",
+      "name": "Harpoon Goto Editor 3",
+      "command": "vscode-harpoon.gotoEditor3",
+      "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+    },
+    {
+      "key": "4",
+      "name": "Harpoon Goto Editor 4",
+      "command": "vscode-harpoon.gotoEditor4",
+      "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
+    },
+    {
+      "key": "5",
+      "name": "Harpoon Goto Editor 5",
+      "command": "vscode-harpoon.gotoEditor5",
+      "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
     },
     {
       "key": "h",

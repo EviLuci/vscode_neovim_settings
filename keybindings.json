@@ -6,16 +6,6 @@
     "command": "whichkey.show",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
-  {
-    "command": "vscode-neovim.send",
-    // Invoke the binding with this key sequence.
-    "key": "alt+h",
-    // Don't activate during insert mode.
-    // Docs for "when": https://code.visualstudio.com/api/references/when-clause-contexts
-    "when": "editorTextFocus && neovim.mode != insert",
-    // Send this input to Neovim.
-    "args": "<A-h>"
-  },
 
   // Paste Below
   {
@@ -64,6 +54,12 @@
     "key": "alt+;",
     "when": "editorTextFocus && neovim.mode == insert",
     "args": "<Esc>miA;<Esc>`ii"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+,",
+    "when": "editorTextFocus && neovim.mode == insert",
+    "args": "<Esc>miA,<Esc>`ii"
   },
 
   // Copy Whole buffer
@@ -128,49 +124,6 @@
     "key": "[ space",
     "when": "editorTextFocus && neovim.mode != insert",
     "args": "O<ESC>"
-  },
-
-  // Comment line below (gco)
-  {
-    "command": "vscode-neovim.send",
-    "key": "g c o",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "o<ESC>Vcx<ESC>:normal gcc<CR>fxa<BS>"
-  },
-
-  // Comment line above (gcO)
-  {
-    "command": "vscode-neovim.send",
-    "key": "g c shift+o",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "O<ESC>Vcx<ESC>:normal gcc<CR>fxa<BS>"
-  },
-
-  // Harpoon
-  {
-    "key": "space 1",
-    "command": "vscode-harpoon.gotoEditor1",
-    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "space 2",
-    "command": "vscode-harpoon.gotoEditor2",
-    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "space 3",
-    "command": "vscode-harpoon.gotoEditor3",
-    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "space 4",
-    "command": "vscode-harpoon.gotoEditor4",
-    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "space 5",
-    "command": "vscode-harpoon.gotoEditor5",
-    "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
 
   // Errors
@@ -489,7 +442,7 @@
   {
     "key": "ctrl+/",
     "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
+    "when": "terminal.active && neovim.mode != insert"
   },
   {
     "key": "ctrl+`",
