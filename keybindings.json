@@ -6,6 +6,145 @@
     "command": "whichkey.show",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
+  {
+    "command": "vscode-neovim.send",
+    // Invoke the binding with this key sequence.
+    "key": "alt+h",
+    // Don't activate during insert mode.
+    // Docs for "when": https://code.visualstudio.com/api/references/when-clause-contexts
+    "when": "editorTextFocus && neovim.mode != insert",
+    // Send this input to Neovim.
+    "args": "<A-h>"
+  },
+
+  // Paste Below
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+v",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "m`o<ESC>p``"
+  },
+  // Paste Above
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+p",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "m`O<ESC>p``"
+  },
+
+  // Move to start and end of line
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+h",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "^"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+l",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "g_"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+h",
+    "when": "editorTextFocus && neovim.mode == insert",
+    "args": "<C-O>I"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+l",
+    "when": "editorTextFocus && neovim.mode == insert",
+    "args": "<END>"
+  },
+
+  // Insert ;
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+;",
+    "when": "editorTextFocus && neovim.mode == insert",
+    "args": "<Esc>miA;<Esc>`ii"
+  },
+
+  // Copy Whole buffer
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+y",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<cmd>%y+<CR>"
+  },
+
+  // Change word in insert mode
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+w",
+    "when": "editorTextFocus && neovim.mode == insert",
+    "args": "<C-O>ciw"
+  },
+
+  // Insert empty line below (Normal Mode)
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+o",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": ":<C-u>call append(line(\".\"), repeat([\"\"], v:count1))<CR>"
+  },
+
+  // Insert empty line above (Normal Mode)
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+shift+o",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": ":<C-u>call append(line(\".\")-1, repeat([\"\"], v:count1))<CR>"
+  },
+
+  // Insert empty line below (Insert Mode)
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+o",
+    "when": "editorTextFocus && neovim.mode == insert",
+    "args": "<C-O>o"
+  },
+
+  // Insert empty line above (Insert Mode)
+  {
+    "command": "vscode-neovim.send",
+    "key": "alt+shift+o",
+    "when": "editorTextFocus && neovim.mode == insert",
+    "args": "<C-O>O"
+  },
+
+  // Insert blank line below (o<Esc>)
+  {
+    "command": "vscode-neovim.send",
+    "key": "] space",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "o<ESC>"
+  },
+
+  // Insert blank line above (O<Esc>)
+  {
+    "command": "vscode-neovim.send",
+    "key": "[ space",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "O<ESC>"
+  },
+
+  // Comment line below (gco)
+  {
+    "command": "vscode-neovim.send",
+    "key": "g c o",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "o<ESC>Vcx<ESC>:normal gcc<CR>fxa<BS>"
+  },
+
+  // Comment line above (gcO)
+  {
+    "command": "vscode-neovim.send",
+    "key": "g c shift+o",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "O<ESC>Vcx<ESC>:normal gcc<CR>fxa<BS>"
+  },
 
   // Harpoon
   {
@@ -15,7 +154,7 @@
   },
   {
     "key": "2",
-    // "command": "vscode-harpoon.gotoEditor2",
+    "command": "vscode-harpoon.gotoEditor2",
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
   {
@@ -34,8 +173,6 @@
     "when": "neovim.mode != insert && (editorTextFocus || !inputFocus)"
   },
 
-  // Move inside insert mode
-
   // Errors
   {
     "key": "] d",
@@ -46,18 +183,6 @@
     "key": "[ d",
     "command": "editor.action.marker.prev",
     "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "",
-    "command": "workbench.action.problems.focus"
-  },
-  {
-    "key": "",
-    "command": "workbench.action.showErrorsWarnings"
-  },
-  {
-    "key": "",
-    "command": "workbench.actions.workbench.panel.markers.view.toggleWarnings"
   },
   // {
   //   "key": "] E",
@@ -380,5 +505,9 @@
     "key": "ctrl+/",
     "command": "-terminalSuggestToggleExplainMode",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+  },
+  {
+    "key": "alt+d",
+    "command": "editor.action.duplicateSelection"
   }
 ]

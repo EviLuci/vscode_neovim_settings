@@ -1119,8 +1119,36 @@
           "command": "editor.action.marker.prevInFiles"
         },
         {
-          "key": "d",
+          "key": "v",
+          "name": "View problems",
+          "type": "command",
           "command": "workbench.action.view.problems"
+        },
+        {
+          "key": "f",
+          "name": "Focus on problems view",
+          "type": "command",
+          "command": "workbench.action.problems.focus"
+        }
+      ]
+    },
+    {
+      "key": "y",
+      "name": "Yank...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "p",
+          "name": "Duplicate line",
+          "type": "command",
+          "command": "editor.action.duplicateSelection"
+        },
+        {
+          "key": "c",
+          "name": "Duplicate line and comment",
+          "type": "command",
+          "command": "vscode-neovim.send",
+          "args": "yygccp"
         }
       ]
     },
