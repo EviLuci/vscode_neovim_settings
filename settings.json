@@ -2,19 +2,9 @@
   // Flutter
   "dart.flutterSdkPath": "/home/sujan/flutter",
 
-  // AI
   // Github Copilot
   "github.copilot.chat.inlineChatHint.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-
-  "supermaven.enable": {
-    "*": true
-  },
-  "codeium.enableConfig": {
-    "*": false,
-    "markdown": true,
-    "properties": true
-  },
 
   // Liveserver
   "liveServer.settings.donotShowInfoMsg": true,
@@ -35,8 +25,11 @@
 
   // Window
   "window.autoDetectColorScheme": true,
-  "window.titleBarStyle": "custom",
   "window.confirmSaveUntitledWorkspace": false,
+  "window.density.editorTabHeight": "compact",
+  "window.customMenuBarAltFocus": false,
+  "window.enableMenuBarMnemonics": false,
+  "window.commandCenter": false,
 
   // Workbench
   "workbench.list.multiSelectModifier": "alt",
@@ -44,13 +37,21 @@
   "workbench.colorTheme": "Tokyo Night",
   "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.editor.revealIfOpen": true,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.highlightModifiedTabs": true,
 
   // Telemetry
+  // "telemetry.enableTelemetry": false,
   "telemetry.telemetryLevel": "off",
+  "telemetry.feedback.enabled": false,
 
   // Explorer
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+
+  // Scm
+  "scm.compactFolders": false,
 
   // Editor
   "editor.minimap.enabled": false,
@@ -67,6 +68,8 @@
   "editor.cursorSurroundingLines": 5,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.suggest.showStatusBar": true,
+  "editor.scrollbar.horizontalScrollbarSize": 6,
+  "editor.scrollbar.verticalScrollbarSize": 6,
 
   // Status Bar
   "debug.showInStatusBar": "always",
@@ -139,7 +142,6 @@
   // Whichkey
   "whichkey.delay": 0,
   "whichkey.sortOrder": "customNonNumberFirst",
-  "whichkey.useFullWidthCharacters": true,
   "whichkey.bindings": [
     {
       "key": " ",
