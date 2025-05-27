@@ -30,6 +30,8 @@
   "window.customMenuBarAltFocus": false,
   "window.enableMenuBarMnemonics": false,
   "window.commandCenter": false,
+  "window.menuBarVisibility": "compact",
+  "window.customTitleBarVisibility": "never",
 
   // Workbench
   "workbench.list.multiSelectModifier": "alt",
@@ -530,27 +532,164 @@
       "type": "bindings",
       "bindings": [
         {
-          "key": "C",
-          "name": "Checkout",
+          "key": "a",
+          "name": "Add Remote",
           "type": "command",
-          "command": "git.checkout"
+          "command": "git.addRemote"
         },
         {
           "key": "d",
           "name": "Diff",
-          "command": "git.timeline.openDiff"
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "d",
+              "name": "Open Diff",
+              "type": "command",
+              "command": "git.timeline.openDiff"
+            },
+            {
+              "key": "h",
+              "name": "Diff Stage Hunk",
+              "type": "command",
+              "command": "git.diff.stageHunk"
+            },
+            {
+              "key": "m",
+              "name": "Compute Conflicts with Git (Diff3)",
+              "type": "command",
+              "command": "git.runGitMergeDiff3"
+            },
+            {
+              "key": "s",
+              "name": "Diff Stage Selection",
+              "type": "command",
+              "command": "git.diff.stageSelection"
+            },
+            {
+              "key": "x",
+              "name": "Close All Diff Editors",
+              "type": "command",
+              "command": "git.closeAllDiffEditors"
+            }
+          ]
         },
         {
           "key": "c",
           "name": "Commit",
-          "type": "command",
-          "command": "git.commit"
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "c",
+              "name": "Commit",
+              "type": "command",
+              "command": "git.commit"
+            },
+            {
+              "key": "C",
+              "name": "Commit All",
+              "type": "command",
+              "command": "git.commitAll"
+            },
+            {
+              "key": "s",
+              "name": "Commit Staged",
+              "type": "command",
+              "command": "git.commitStaged"
+            },
+            {
+              "key": "M",
+              "name": "Commit Staged All",
+              "type": "command",
+              "command": "git.commitStagedAll"
+            },
+            {
+              "key": "C",
+              "name": "Commit All",
+              "type": "command",
+              "command": "git.commitAll"
+            },
+            {
+              "key": "u",
+              "name": "Undo Last Commit",
+              "type": "command",
+              "command": "git.undoCommit"
+            }
+          ]
+        },
+        {
+          "key": "C",
+          "name": "Create/Cherry Pick",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "b",
+              "name": "Create Branch",
+              "type": "command",
+              "command": "git.branch"
+            },
+            {
+              "key": "t",
+              "name": "Create Tag",
+              "type": "command",
+              "command": "git.createTag"
+            },
+            {
+              "key": "B",
+              "name": "Create Branch From",
+              "type": "command",
+              "command": "git.branchFrom"
+            }
+          ]
         },
         {
           "key": "D",
-          "name": "Delete Branch",
-          "type": "command",
-          "command": "git.deleteBranch"
+          "name": "Delete/Discard",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "b",
+              "name": "Delete Branch",
+              "type": "command",
+              "command": "git.deleteBranch"
+            },
+            {
+              "key": "t",
+              "name": "Delete Tag",
+              "type": "command",
+              "command": "git.deleteTag"
+            },
+            {
+              "key": "B",
+              "name": "Delete Remote Branch",
+              "type": "command",
+              "command": "git.deleteRemoteBranch"
+            },
+            {
+              "key": "T",
+              "name": "Delete Remote Tag",
+              "type": "command",
+              "command": "git.deleteRemoteTag"
+            },
+            {
+              "key": "a",
+              "name": "Discard All Changes",
+              "type": "command",
+              "command": "git.cleanAll"
+            },
+            {
+              "key": "c",
+              "name": "Discard Changes",
+              "type": "command",
+              "command": "git.clean"
+            },
+            {
+              "key": "u",
+              "name": "Discard All Untracked Changes",
+              "type": "command",
+              "command": "git.cleanAllUntracked"
+            }
+          ]
         },
         {
           "key": "f",
@@ -567,14 +706,51 @@
         {
           "key": "m",
           "name": "Merge",
-          "type": "command",
-          "command": "git.merge"
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "m",
+              "name": "Merge",
+              "type": "command",
+              "command": "git.merge"
+            },
+            {
+              "key": "o",
+              "name": "Resolve in Merge Editor",
+              "type": "command",
+              "command": "git.openMergeEditor"
+            },
+            {
+              "key": "s",
+              "name": "Stage All Merge Changes",
+              "type": "command",
+              "command": "git.stageAllMerge"
+            },
+            {
+              "key": "c",
+              "name": "Run Git Merge",
+              "type": "command",
+              "command": "git.runGitMerge"
+            },
+            {
+              "key": "a",
+              "name": "Accept Merge",
+              "type": "command",
+              "command": "git.acceptMerge"
+            },
+            {
+              "key": "x",
+              "name": "Abort Merge",
+              "type": "command",
+              "command": "git.mergeAbort"
+            }
+          ]
         },
         {
           "key": "p",
           "name": "Push",
           "type": "command",
-          "command": "git.publish"
+          "command": "git.push"
         },
         {
           "key": "P",
@@ -588,19 +764,40 @@
           "type": "bindings",
           "bindings": [
             {
+              "key": "a",
+              "name": "Open All Changes",
+              "type": "command",
+              "command": "git.openAllChanges"
+            },
+            {
               "key": "r",
               "name": "Revert selected ranges",
               "type": "command",
-              "command": "git.revertSelectedRanges"
+              "command": "git.revertSelectedRanges",
+              "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
             },
             {
               "key": "s",
-              "name": "Stage",
+              "name": "Stage Selected Ranges",
               "type": "command",
-              "command": "git.stage"
+              "command": "git.stageSelectedRanges",
+              "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
             },
             {
               "key": "u",
+              "name": "Unstage Selected Ranges",
+              "command": "git.unstageSelectedRanges",
+              "type": "command",
+              "when": "editorTextFocus && isInDiffEditor && isInDiffRightEditor && !operationInProgress && resourceScheme == 'git'"
+            },
+            {
+              "key": "S",
+              "name": "Stage All Changes",
+              "type": "command",
+              "command": "git.stageAll"
+            },
+            {
+              "key": "U",
               "name": "Unstage",
               "type": "command",
               "command": "git.unstage"
@@ -620,11 +817,18 @@
           "type": "command",
           "command": "workbench.action.editor.nextChange"
         },
+
         {
           "key": "p",
           "name": "Previous Change",
           "type": "command",
           "command": "workbench.action.editor.previousChange"
+        },
+        {
+          "key": "s",
+          "name": "Stage",
+          "type": "command",
+          "command": "git.stage"
         },
         {
           "key": "S",
@@ -633,16 +837,53 @@
           "command": "workbench.view.scm"
         },
         {
-          "key": "t",
-          "name": "Create Tag",
-          "type": "command",
-          "command": "git.createTag"
-        },
-        {
-          "key": "T",
-          "name": "Delete Tag",
-          "type": "command",
-          "command": "git.deleteTag"
+          "key": "v",
+          "name": "View",
+          "type": "bindings",
+          "bindings": [
+            {
+              "key": "c",
+              "name": "View Changes",
+              "type": "command",
+              "command": "git.viewChanges"
+            },
+            {
+              "key": "C",
+              "name": "View Commit Timeline",
+              "type": "command",
+              "command": "git.timeline.viewCommit"
+            },
+            {
+              "key": "h",
+              "name": "Open File History",
+              "type": "command",
+              "command": "git.viewFileHistory"
+            },
+            {
+              "key": "d",
+              "name": "Open File Diff",
+              "type": "command",
+              "command": "git.viewFileDiff"
+            },
+            {
+              "key": "s",
+              "name": "View Staged Changes",
+              "type": "command",
+              "command": "git.viewStagedChanges"
+            },
+            {
+              "key": "S",
+              "name": "View Stash",
+              "type": "command",
+              "command": "git.stashView"
+            },
+            {
+              "key": "u",
+              "name": "View Unstaged Changes",
+              "type": "command",
+              "command": "git.viewUnstagedChanges"
+            }
+          ]
         }
       ]
     },
@@ -841,7 +1082,7 @@
           ]
         },
         {
-          "key": "n",
+          "key": "N",
           "name": "Notifications",
           "type": "bindings",
           "bindings": [
@@ -923,7 +1164,7 @@
       ]
     },
     {
-      "key": "T",
+      "key": "u",
       "name": "UI toggles...",
       "type": "bindings",
       "bindings": [
@@ -941,9 +1182,9 @@
         },
         {
           "key": "m",
-          "name": "Toggle maximized panel",
+          "name": "Toggle minimap",
           "type": "command",
-          "command": "workbench.action.toggleMaximizedPanel"
+          "command": "editor.action.toggleMinimap"
         },
         {
           "key": "f",
@@ -964,7 +1205,13 @@
           "command": "workbench.action.toggleActivityBarVisibility"
         },
         {
-          "key": "T",
+          "key": "b",
+          "name": "Toggle side bar visibility",
+          "type": "command",
+          "command": "workbench.action.toggleSidebarVisibility"
+        },
+        {
+          "key": "t",
           "name": "Toggle tab visibility",
           "type": "command",
           "command": "workbench.action.toggleTabsVisibility"
@@ -1001,10 +1248,16 @@
           "command": "notifications.toggleDoNotDisturbMode"
         },
         {
-          "key": "B",
-          "name": "Toggle git blame",
+          "key": "b",
+          "name": "Toggle git blame editor decoration",
           "type": "command",
-          "command": "gitlens.toggleLineBlame"
+          "command": "git.blame.toggleEditorDecoration"
+        },
+        {
+          "key": "m",
+          "name": "Toggle maximized panel",
+          "type": "command",
+          "command": "workbench.action.toggleMaximizedPanel"
         },
         {
           "key": "r",
@@ -1019,12 +1272,6 @@
           "command": "workbench.action.toggleStatusbarVisibility"
         },
         {
-          "key": "b",
-          "name": "Toggle side bar visibility",
-          "type": "command",
-          "command": "workbench.action.toggleSidebarVisibility"
-        },
-        {
           "key": "w",
           "name": "Toggle ignore trim whitespace in diff",
           "type": "command",
@@ -1035,12 +1282,6 @@
           "name": "Toggle word wrap",
           "type": "command",
           "command": "editor.action.toggleWordWrap"
-        },
-        {
-          "key": "m",
-          "name": "Toggle minimap",
-          "type": "command",
-          "command": "editor.action.toggleMinimap"
         }
       ]
     },

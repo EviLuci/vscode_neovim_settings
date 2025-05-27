@@ -150,14 +150,14 @@
 
   // Git Change
   {
-    "key": "[ g",
+    "key": "[ h",
     "name": "Previous change",
     "type": "command",
     "command": "workbench.action.editor.previousChange",
     "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "] g",
+    "key": "] h",
     "name": "Next change",
     "type": "command",
     "command": "workbench.action.editor.nextChange",
@@ -263,12 +263,12 @@
   {
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "!(suggestWidgetMultipleSuggestions && suggestWidgetVisible) && (editorTextFocus || !inputFocus)"
   },
   {
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "!(suggestWidgetMultipleSuggestions && suggestWidgetVisible) && (editorTextFocus || !inputFocus)"
   },
 
   // Sidebar
