@@ -54,9 +54,6 @@
 
   // Scm
   "scm.compactFolders": false,
-
-  // Editor
-  "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
@@ -127,7 +124,7 @@
 
   // Neovim
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "$home/.config/nvim/init.lua",
+  "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.lua",
   "editor.lineNumbers": "relative",
   "vscode-neovim.compositeKeys": {
     "jk": {
@@ -986,19 +983,6 @@
       "command": "notifications.toggleList"
     },
     {
-      "key": "u",
-      "name": "Dismiss",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "n",
-          "name": "Notifications",
-          "type": "command",
-          "command": "notifications.clearAll"
-        }
-      ]
-    },
-    {
       "key": "r",
       "name": "Run...",
       "type": "bindings",
@@ -1045,9 +1029,9 @@
         },
         {
           "key": "R",
-          "name": "Search all references in side bar",
+          "name": "Search all references ",
           "type": "command",
-          "command": "references-view.find"
+          "command": "references-view.findReferences"
         },
         {
           "key": "t",
@@ -1082,7 +1066,7 @@
           ]
         },
         {
-          "key": "N",
+          "key": "n",
           "name": "Notifications",
           "type": "bindings",
           "bindings": [
@@ -1169,10 +1153,10 @@
       "type": "bindings",
       "bindings": [
         {
-          "key": "z",
-          "name": "Toggle zen mode",
+          "key": "n",
+          "name": "Notifications",
           "type": "command",
-          "command": "workbench.action.toggleZenMode"
+          "command": "notifications.clearAll"
         },
         {
           "key": "p",
@@ -1209,12 +1193,6 @@
           "name": "Toggle side bar visibility",
           "type": "command",
           "command": "workbench.action.toggleSidebarVisibility"
-        },
-        {
-          "key": "t",
-          "name": "Toggle tab visibility",
-          "type": "command",
-          "command": "workbench.action.toggleTabsVisibility"
         }
       ]
     },
@@ -1228,6 +1206,12 @@
           "name": "Toggle Terminal",
           "type": "command",
           "command": "workbench.action.togglePanel"
+        },
+        {
+          "key": "z",
+          "name": "Toggle zen mode",
+          "type": "command",
+          "command": "workbench.action.toggleZenMode"
         },
         {
           "key": "c",
@@ -1482,5 +1466,6 @@
         }
       ]
     }
-  ]
+  ],
+  "editor.minimap.enabled": false
 }
