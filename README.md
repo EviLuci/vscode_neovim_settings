@@ -2,6 +2,8 @@
 
 This repository contains my personal VSCode settings and keybindings for integrating Neovim with VSCode using the `vscode-neovim` extension, along with `harpoon` and `which-key` for some quality of life improvements.
 
+![VSCode](https://github.com/EviLuci/vscode_neovim_settings/blob/main/vscode.png)
+
 This setup is for those who:
 
 - Use Neovim personally but prefer VSCode for professional collaboration.
@@ -12,7 +14,7 @@ This setup is for those who:
 
 ## Why This Setup?
 
-I just started us Neovim (with [LazyVim](https://lazyvim.org/)) mostly for personal work or projects, but VSCode is more common in workplace settings, so I prefer using VSCode for professional collaboration. The insert mode is basically just default VSCode, so anybody can use it like they usually do while I am able to have familiar neovim like environment that works just fine.
+I just started using Neovim (with [LazyVim](https://lazyvim.org/)) mostly for personal work or projects, but VSCode is more common in workplace settings, so I still prefer using VScode for professional collaboration. The insert mode is basically just default VSCode, so anybody can use it like they usually do while I am able to have familiar neovim like environment that works just fine.
 
 ## Extensions
 To fully utilize this setup, install the following extensions:
