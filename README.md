@@ -2,7 +2,9 @@
 
 This repository contains my personal VSCode settings and keybindings for integrating Neovim with VSCode using the `vscode-neovim` extension, along with `harpoon` and `which-key` for some quality of life improvements.
 
-![VSCode](https://github.com/EviLuci/vscode_neovim_settings/blob/main/vscode.png)
+![VSCode](https://github.com/EviLuci/vscode_neovim_settings/blob/main/assets/vscode_command_pallete.png)
+
+![VSCode](https://github.com/EviLuci/vscode_neovim_settings/blob/main/assets/vscode_with_file_explorer.png)
 
 This setup is for those who:
 
