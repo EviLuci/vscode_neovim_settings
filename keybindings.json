@@ -128,25 +128,32 @@
 
   // Errors
   {
-    "key": "] d",
+    "key": "] e",
     "command": "editor.action.marker.next",
     "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
   },
   {
-    "key": "[ d",
+    "key": "[ e",
     "command": "editor.action.marker.prev",
     "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
   },
-  // {
-  //   "key": "] E",
-  //   "command": "editor.action.marker.nextInFiles",
-  //   "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
-  // },
-  // {
-  //   "key": "[ E",
-  //   "command": "editor.action.marker.prevInFiles",
-  //   "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
-  // },
+  {
+    "key": "] d",
+    "command": "editor.action.marker.nextinfiles",
+    "when": "neovim.mode != insert && editortextfocus && !editorreadonly"
+  },
+  {
+    "key": "[ d",
+    "command": "editor.action.marker.previnfiles",
+    "when": "neovim.mode != insert && editortextfocus && !editorreadonly"
+  },
+
+  // Closes markers (error, warning, info)
+  {
+    "key": "escape",
+    "command": "closeMarkersNavigation",
+    "when": "editorFocus && markersNavigationVisible"
+  },
 
   // Git Change
   {

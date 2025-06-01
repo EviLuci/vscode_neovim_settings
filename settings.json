@@ -31,7 +31,6 @@
   "window.enableMenuBarMnemonics": false,
   "window.commandCenter": false,
   "window.menuBarVisibility": "compact",
-  "window.customTitleBarVisibility": "never",
 
   // Workbench
   "workbench.list.multiSelectModifier": "alt",
@@ -41,6 +40,7 @@
   "workbench.editor.revealIfOpen": true,
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.highlightModifiedTabs": true,
+  "workbench.activityBar.location": "top",
 
   // Telemetry
   // "telemetry.enableTelemetry": false,
@@ -692,6 +692,12 @@
           "name": "Fetch",
           "type": "command",
           "command": "git.fetch"
+        },
+        {
+          "key": "g",
+          "name": "Go to Source Control",
+          "type": "command",
+          "command": ["workbench.view.scm", "workbench.scm.focus"]
         },
         {
           "key": "i",
