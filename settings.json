@@ -612,12 +612,6 @@
               "command": "git.commitStagedAll"
             },
             {
-              "key": "C",
-              "name": "Commit All",
-              "type": "command",
-              "command": "git.commitAll"
-            },
-            {
               "key": "u",
               "name": "Undo Last Commit",
               "type": "command",
@@ -627,9 +621,15 @@
         },
         {
           "key": "C",
-          "name": "+Create/Cherry Pick",
+          "name": "+Create/Checkout",
           "type": "bindings",
           "bindings": [
+            {
+              "key": "c",
+              "name": "Checkout",
+              "type": "command",
+              "command": "git.checkout"
+            },
             {
               "key": "b",
               "name": "Create Branch",
