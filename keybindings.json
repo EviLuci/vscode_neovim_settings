@@ -172,14 +172,14 @@
   },
 
   // Clear `highlight` command
-  {
-    "key": "escape",
-    "name": "Clear Highlights",
-    "type": "command",
-    "command": "vscode-neovim.send",
-    "args": ":noh<CR>",
-    "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
-  },
+  // {
+  //   "key": "escape",
+  //   "name": "Clear Highlights",
+  //   "type": "command",
+  //   "command": "vscode-neovim.send",
+  //   "args": ":noh<CR>",
+  //   "when": "neovim.mode != insert && editorTextFocus && !editorReadonly"
+  // },
 
   // GitHub Copilot
   {
@@ -221,7 +221,11 @@
     "when": "neovim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
     "command": "workbench.action.toggleSidebarVisibility"
   },
-
+  {
+    "key": "shift+alt+f",
+    "command": "filesExplorer.findInFolder",
+    "when": "explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
+  },
   // Suggestion
   {
     "key": "ctrl+j",

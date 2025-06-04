@@ -198,7 +198,7 @@
     },
     {
       "key": "a",
-      "name": "AI...",
+      "name": "+AI",
       "type": "bindings",
       "bindings": [
         {
@@ -222,7 +222,7 @@
     },
     {
       "key": "b",
-      "name": "Buffers/Editors...",
+      "name": "+Buffers/Editors",
       "type": "bindings",
       "bindings": [
         {
@@ -311,7 +311,7 @@
     },
     {
       "key": "c",
-      "name": "Code...",
+      "name": "+Code",
       "type": "bindings",
       "bindings": [
         {
@@ -372,7 +372,7 @@
     },
     {
       "key": "d",
-      "name": "Debug...",
+      "name": "+Debug",
       "type": "bindings",
       "bindings": [
         {
@@ -475,18 +475,18 @@
     },
     {
       "key": "f",
-      "name": "Find...",
+      "name": "+Find",
       "type": "bindings",
       "bindings": [
         {
-          "key": "a",
-          "name": "Show all opened files",
+          "key": "b",
+          "name": "Buffers",
           "type": "command",
           "command": "workbench.action.showAllEditors"
         },
         {
-          "key": "e",
-          "name": "Show active in explorer",
+          "key": "B",
+          "name": "Buffers in Explorer",
           "type": "command",
           "command": "workbench.files.action.showActiveFileInExplorer"
         },
@@ -504,7 +504,7 @@
         },
         {
           "key": "n",
-          "name": "New Untitled",
+          "name": "New Untitled file",
           "type": "command",
           "command": "workbench.action.files.newUntitledFile"
         },
@@ -519,12 +519,24 @@
           "name": "Open active in new window",
           "type": "command",
           "command": "workbench.action.files.showOpenedFileInNewWindow"
+        },
+        {
+          "key": "t",
+          "name": "Toggle Terminal",
+          "type": "command",
+          "command": "workbench.action.terminal.toggleTerminal"
+        },
+        {
+          "key": "T",
+          "name": "Terminal (cwd)",
+          "type": "command",
+          "command": "workbench.action.terminal.goToRecentDirectory"
         }
       ]
     },
     {
       "key": "g",
-      "name": "Git...",
+      "name": "+Git",
       "type": "bindings",
       "bindings": [
         {
@@ -535,7 +547,7 @@
         },
         {
           "key": "d",
-          "name": "Diff",
+          "name": "+Diff",
           "type": "bindings",
           "bindings": [
             {
@@ -572,7 +584,7 @@
         },
         {
           "key": "c",
-          "name": "Commit",
+          "name": "+Commit",
           "type": "bindings",
           "bindings": [
             {
@@ -615,7 +627,7 @@
         },
         {
           "key": "C",
-          "name": "Create/Cherry Pick",
+          "name": "+Create/Cherry Pick",
           "type": "bindings",
           "bindings": [
             {
@@ -640,7 +652,7 @@
         },
         {
           "key": "D",
-          "name": "Delete/Discard",
+          "name": "+Delete/Discard",
           "type": "bindings",
           "bindings": [
             {
@@ -695,7 +707,7 @@
         },
         {
           "key": "g",
-          "name": "Go to Source Control",
+          "name": "Open Source Control",
           "type": "command",
           "command": ["workbench.view.scm", "workbench.scm.focus"]
         },
@@ -707,7 +719,7 @@
         },
         {
           "key": "m",
-          "name": "Merge",
+          "name": "+Merge",
           "type": "bindings",
           "bindings": [
             {
@@ -762,7 +774,7 @@
         },
         {
           "key": "h",
-          "name": "Hunk",
+          "name": "+Hunk",
           "type": "bindings",
           "bindings": [
             {
@@ -840,7 +852,7 @@
         },
         {
           "key": "v",
-          "name": "View",
+          "name": "+View",
           "type": "bindings",
           "bindings": [
             {
@@ -927,7 +939,7 @@
     },
     {
       "key": "h",
-      "name": "Harpoon",
+      "name": "+Harpoon",
       "type": "bindings",
       "bindings": [
         {
@@ -989,7 +1001,7 @@
     },
     {
       "key": "r",
-      "name": "Run...",
+      "name": "+Run",
       "type": "bindings",
       "bindings": [
         {
@@ -1008,12 +1020,18 @@
     },
     {
       "key": "s",
-      "name": "Search...",
+      "name": "+Search",
       "type": "bindings",
       "bindings": [
         {
+          "key": "B",
+          "name": "Opened Buffers",
+          "type": "command",
+          "command": "workbench.action.showAllEditors"
+        },
+        {
           "key": "s",
-          "name": "Symbol in file",
+          "name": "Go to Symbol in file",
           "type": "command",
           "command": "workbench.action.gotoSymbol"
         },
@@ -1025,7 +1043,7 @@
         },
         {
           "key": "p",
-          "name": "Search word in a project",
+          "name": "Word in a project",
           "type": "commands",
           "commands": [
             "editor.action.addSelectionToNextFindMatch",
@@ -1040,13 +1058,13 @@
         },
         {
           "key": "t",
-          "name": "text",
+          "name": "text in File",
           "type": "command",
           "command": "workbench.action.findInFiles"
         },
         {
           "key": "r",
-          "name": "Find and Replace",
+          "name": "+Find and Replace",
           "type": "bindings",
           "bindings": [
             {
@@ -1072,7 +1090,7 @@
         },
         {
           "key": "n",
-          "name": "Notifications",
+          "name": "+Notifications",
           "type": "bindings",
           "bindings": [
             {
@@ -1105,7 +1123,7 @@
     },
     {
       "key": "S",
-      "name": "Show...",
+      "name": "+Show",
       "type": "bindings",
       "bindings": [
         {
@@ -1154,7 +1172,7 @@
     },
     {
       "key": "u",
-      "name": "UI toggles...",
+      "name": "+UI toggles",
       "type": "bindings",
       "bindings": [
         {
@@ -1209,7 +1227,7 @@
     },
     {
       "key": "t",
-      "name": "Toggles...",
+      "name": "+Toggles",
       "type": "bindings",
       "bindings": [
         {
@@ -1282,7 +1300,7 @@
     },
     {
       "key": "w",
-      "name": "Window...",
+      "name": "+Window",
       "type": "bindings",
       "bindings": [
         {
@@ -1361,7 +1379,7 @@
     },
     {
       "key": "x",
-      "name": "Errors...",
+      "name": "+Errors",
       "type": "bindings",
       "bindings": [
         {
@@ -1398,7 +1416,7 @@
     },
     {
       "key": "y",
-      "name": "Yank...",
+      "name": "+Yank",
       "type": "bindings",
       "bindings": [
         {
@@ -1418,7 +1436,7 @@
     },
     {
       "key": "z",
-      "name": "Folding...",
+      "name": "+Folding",
       "type": "bindings",
       "bindings": [
         {
