@@ -6,6 +6,16 @@
   "github.copilot.chat.inlineChatHint.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": true,
 
+  // Roo Cline
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+
   // Liveserver
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,

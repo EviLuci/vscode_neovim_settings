@@ -226,6 +226,7 @@
     "command": "filesExplorer.findInFolder",
     "when": "explorerResourceIsFolder && filesExplorerFocus && foldersViewVisible && !inputFocus"
   },
+
   // Suggestion
   {
     "key": "ctrl+j",
