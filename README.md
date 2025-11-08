@@ -1,4 +1,4 @@
-# VSCode Neovim Settings & Keymaps (WIP)
+# VSCode Neovim Settings & Keymaps (not maintained as I have moved to Zed)
 
 This repository contains my personal VSCode settings and keybindings for integrating Neovim with VSCode using the `vscode-neovim` extension, along with `harpoon` and `which-key` for some quality of life improvements. It's work in progress so most keymaps may not work properly as I haven't tested them properly. I just created logical keymaps using the command id found in keyboard shortcuts but have only used what I currently need.
 
